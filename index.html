@@ -14,16 +14,19 @@
     position: relative;
     width: 1120px;
     height: 2240px;
-    imagen: transparent;
     overflow: hidden;
   }
 
   .imagen {
-	position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .oculto {
+    display: none;
   }
 </style>
 </head>
@@ -32,16 +35,23 @@
 <div class="animation-container">
   <img src="fondo.png" class="imagen" />
   <img src="patos.webp" class="imagen" />
-   
   <img src="pasto_inf.webp" class="imagen" />
   <img src="hormigas.webp" class="imagen" />
   <img src="pasto.webp" class="imagen" />
-  
-   <img src="mariposa.webp" class="imagen" />
-  
+  <img src="mariposa.webp" class="imagen" />
+  <img id="hormigaHoja" src="hormiga_hoja.webp" class="imagen oculto" />
+  <img id="hormigaPelea" src="hormigas_pelea.webp" class="imagen oculto" />
 </div>
 
-
+<script>
+  setTimeout(() => {
+    document.getElementById("hormigaHoja").classList.remove("oculto");
+  }, 25000); // 12 segundos
+  
+   setTimeout(() => {
+    document.getElementById("hormigaPelea").classList.remove("oculto");
+  }, 35000); // 12 segundos
+</script>
 
 </body>
 </html>
